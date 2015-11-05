@@ -1,7 +1,6 @@
 
 
-public class Vector3D
-{
+public class Vector3D {
     double x;
     double y;
     double z;
