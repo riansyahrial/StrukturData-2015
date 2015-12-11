@@ -19,7 +19,7 @@ public class BukaSocket {
         kirimPerintah(perintah);
         
         // Baca balasannya
-        tungguBalasan();
+        ambilBalasan();
 
         // Tutup socket-nya => dengan sendirinya menutup semua stream
         koneksi.close();
@@ -37,7 +37,7 @@ public class BukaSocket {
         keluaranWriter.flush(); // Paksa kirim data yang belum terkirim
     }
     
-    public void tungguBalasan() throws IOException {
+    public void ambilBalasan() throws IOException {
         // 1 & 2. Minta socket untuk baca -> Langsung dibuka
         InputStream masukan = koneksi.getInputStream();
         // Karena keluarannya panjang sehingga harus dibuffer
